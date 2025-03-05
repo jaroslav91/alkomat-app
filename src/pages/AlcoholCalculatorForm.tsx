@@ -15,7 +15,7 @@ import "primereact/resources/primereact.min.css";
 
 const translations = {
   pl: {
-    title: "Wirtualny Alkomat",
+    title: "Wirtualny Alkomat dla Konrada AS'a",
     popularAlcohols: "Najpopularniejsze alkohole",
     alcoholInputForm: "Formularz dodawania alkoholu",
     gender: "Płeć",
@@ -43,7 +43,7 @@ const translations = {
     time: "Godzina"
   },
   en: {
-    title: "Virtual Breathalyzer",
+    title: "Virtual Breathalyzer for Konrad AS",
     popularAlcohols: "Most Popular Alcohols",
     alcoholInputForm: "Alcohol Input Form",
     gender: "Gender",
@@ -127,7 +127,7 @@ const translations = {
     time: "Hora"
   },
   cs: {
-    title: "Virtuální alkomat",
+    title: "Virtuální alkomat dla Konrada pepiczka",
     popularAlcohols: "Nejpopulárnější alkoholy",
     alcoholInputForm: "Formulář pro zadání alkoholu",
     gender: "Pohlaví",
@@ -291,12 +291,12 @@ const AlcoholCalculatorForm: React.FC = () => {
   const languageOptions = [
     { label: "Polski", value: "pl" },
     { label: "English", value: "en" },
-    { label: "Deutsch", value: "de" },
-    { label: "Español", value: "es" },
+    // { label: "Deutsch", value: "de" },
+    // { label: "Español", value: "es" },
     { label: "Čeština", value: "cs" },
   ];
   
-  const t = language === "pl" ?translations.pl :translations.en;
+  const t = language === "pl" ? translations.pl : language ==="cs" ? translations.cs : translations.en;
  // const t = translations[language];
   
   const [formData, setFormData] = useState<FormData>({
