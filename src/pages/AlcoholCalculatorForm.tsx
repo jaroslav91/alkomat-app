@@ -217,17 +217,6 @@ function getEliminationRate(
   return Math.max(baseRate - ageAdjustment, 0.08);
 }
 
-function getFullContribution(entry: AlcoholEntry, form: FormData): number {
-  const pureAlcohol = entry.amount * (entry.percentage / 100) * 0.8;
-  const ratio = getDistributionRatio(
-    form.gender,
-    form.bodyType,
-    form.height,
-    form.weight
-  );
-  return pureAlcohol / (ratio * form.weight);
-}
-
 /**
  * Nowy algorytm obliczania BAC – najpierw sumujemy skumulowaną ilość alkoholu
  * (z uwzględnieniem liniowej absorpcji dla drinków, które jeszcze się nie zakończyły),
